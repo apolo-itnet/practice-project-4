@@ -34,6 +34,14 @@ body {
   background-color: var(--primary-bg-color);
 }
 
+.padding {
+  padding: 0rem 08rem;
+}
+
+.no-padding {
+  padding: 0;  
+}
+
 
 li a {
   list-style: none;
@@ -149,10 +157,16 @@ i {
 
 .sponsor-section {
 
+  .sponsor-heading {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  
   .sponsor-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    margin: 2rem;
     padding: 1.5rem 4rem;
     justify-content: space-between;
     box-shadow: 0 -1px 0px rgba(0, 0, 0, 0.05), 0 1px 0px rgba(0, 0, 0, 0.05);
@@ -238,10 +252,6 @@ i {
     align-items: center;
     gap: 5rem;
 
-    .feature-image {
-
-    }
-
     .feature-content {
 
       .feature-heading {
@@ -265,7 +275,6 @@ i {
 }
 
 .footer-section {
-  padding: 0 !important;
   height: 15rem;
   background-color: var(--footer-bg-color);
 

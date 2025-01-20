@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", serif;
+}
+
+
+:root {
+
+  --primary-bg-color: #f6f6f6;
+
+  --primary-btn-color:rgb(224, 44, 109);
+
+  --footer-bg-color: #0A0826;
+
+  --dark-color: #19191a;
+  --gray-color:  #808080;
+  --white-color: #fff;
+}
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+/* Laptop Screen - 1366px */
+@media (max-width: 1366px) {
+  body {
+    padding: 0rem 4rem; /* Adjust body padding */
+  }
+
+  .banner-section .banner-container {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
+  }
+
+  .gears-section .product-container {
+    grid-template-columns: repeat(3, 1fr); /* Adjust column layout */
+  }
+
+  .feature-section .feature-container {
+    flex-direction: column; /* Stack feature content */
+    gap: 3rem;
+  }
+}
+
+/* Tablet Screen - 768px */
+@media (max-width: 768px) {
+  body {
+    padding: 0rem 2rem; /* Reduce body padding for smaller screens */
+  }
+
+  .banner-section .banner-container {
+    flex-direction: column; /* Stack content vertically */
+    text-align: center;
+  }
+
+  .banner-section .banner-content .banner-heading {
+    font-size: 2.5rem; /* Reduce heading size */
+  }
+
+  .banner-section .banner-image {
+    width: 100%; /* Make the banner image responsive */
+  }
+
+  .gears-section .product-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+
+  .feature-section .feature-container {
+    flex-direction: column; /* Stack features */
+  }
+
+  .footer-section {
+    flex-direction: column; /* Center-align footer content */
+    height: auto; /* Adjust height for smaller screens */
+  }
+}
+
+/* Mobile Screen - 428px */
+@media (max-width: 428px) {
+  body {
+    padding: 0rem 1rem; 
+    overflow-y: hidden;
+  }
+
+  .navbar-section {
+
+    display: flex;
+    align-items: center;
+    justify-self: center;
+
+    .nav-logo {
+      text-align: center;
+    }
+
+    .navbar{
+      display: none;
+    }
+  }
+
+  .banner-section  {
+    padding: 1rem 0;
+  
+    .banner-container {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      place-items: center;
+      padding: 1rem 0;
+      gap: 1rem;
+      
+      .banner-content {
+        grid-row: 2;
+        place-items: center;
+        text-align: center;
+
+        .banner-heading {
+          font-size: 2rem;
+        }
+
+        .banner-description {
+          margin: 1rem 0;
+
+        }
+
+      }
+
+      .banner-image {
+        grid-row: 1;
+        place-items: center;
+        background-position: center;
+        margin-bottom: 1rem;
+        padding: 0;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+  }
+
+  .sponsor-section {
+
+    .sponsor-container {
+      justify-content: space-around;
+      box-shadow: none;
+      padding: 0;
+    }
+  }
+
+
+  .gears-section .product-container {
+    grid-template-columns: 1fr; /* One card per row */
+  }
+
+  .feature-section .feature-container {
+    gap: 2rem; /* Smaller gap for features */
+  }
+
+  .footer-section {
+    padding: 2rem 1rem; /* Adjust footer padding */
+    height: auto; /* Allow auto height for mobile */
+  }
+}
